@@ -18,9 +18,7 @@ def get_mask_account(account_number: str) -> str:
     """
 
     account_str = account_number
-    if len(account_str) > 6:
-        return "Номер счёта введен некорректно"
-    elif account_str == "0":
-        return "Номер счёта введен некорректно"
-    else:
+    if len(account_str) == 20:
         return f"**{account_str[-4:]}"
+    else:
+        return "Номер счёта введен некорректно"
