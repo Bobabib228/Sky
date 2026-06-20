@@ -1,7 +1,6 @@
 import pytest
 
 from src.processing import *
-from tests.conftest import data_list, data_list_canceled
 
 
 def test_filter_by_state(data_list, data_list_executed, data_list_canceled):
