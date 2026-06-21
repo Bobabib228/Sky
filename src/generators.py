@@ -1,4 +1,4 @@
-def filter_by_currency(trans: list, filter):
+def filter_by_currency(trans, filter):
     """
     Фильтрует банковские операции по валюте
 
@@ -6,7 +6,7 @@ def filter_by_currency(trans: list, filter):
     возвращает итерируемый объект
     """
     for i in trans:
-        if i["currency"] == filter:
+        if i['operationAmount']['currency'].get('code') == filter:
             yield i
 
 
