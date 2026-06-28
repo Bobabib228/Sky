@@ -1,4 +1,5 @@
 import pytest
+import os
 
 
 @pytest.fixture
@@ -155,3 +156,27 @@ def data_card_transaction_canceled():
 @pytest.fixture
 def transaction_descriptions_canceled():
     return "Перевод организации"
+
+
+def temp_log_file():
+    """Создает временный файл для логов и удаляет его после теста."""
+    with tempfile.NamedTemporaryFile(mode='w', encoding='utf-8', delete=False, suffix='.log') as f:
+        temp_file = f.name
+
+    yield temp_file
+
+    # Удаляем файл после теста
+    if os.path.exists(temp_file):
+        os.remove(temp_file)
+
+
+@pytest.fixture
+def clean_log_file():
+    filename = "test_log.log"
+    if os.path.exists(filename):
+        os.remove(filename)
+
+    yield filename
+
+    if os.path.exists(filename):
+        os.remove(filename)
