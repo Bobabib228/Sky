@@ -2,7 +2,6 @@ import os
 import json
 import requests
 from dotenv import load_dotenv
-from datetime import datetime, date, time
 
 load_dotenv()
 
@@ -21,6 +20,10 @@ def currency_transfer(trans):
 
         response = requests.request("GET", url, headers=headers, data=payload)
         result = response.json()
+        print(result)
         return float(result["result"])
     else:
         return float(amount)
+
+
+
