@@ -1,6 +1,3 @@
-import datetime
-
-
 def mask_account_card(input_number: str) -> str:
     """
     Маскирует номер банковского счета или карты в зависимости от типа.

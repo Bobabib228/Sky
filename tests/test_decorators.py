@@ -1,4 +1,5 @@
 import pytest
+
 from src.decorators import *
 
 
@@ -16,6 +17,7 @@ def test_successful_execution_console(capsys):
     assert "add" in captured.out
     assert "результат: 8" in captured.out
 
+
 def test_error_console(capsys):
 
     @log()
@@ -30,4 +32,3 @@ def test_error_console(capsys):
 
     assert "divide" in output
     assert "ZeroDivisionError" in output
-

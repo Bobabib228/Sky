@@ -1,11 +1,12 @@
 import os
-import json
+
 import requests
 from dotenv import load_dotenv
 
 load_dotenv()
 
 API_KEY = os.getenv("API_KEY")
+
 
 def currency_transfer(trans):
     amount = trans["operationAmount"]["amount"]
@@ -24,6 +25,3 @@ def currency_transfer(trans):
         return float(result["result"])
     else:
         return float(amount)
-
-
-

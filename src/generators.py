@@ -6,7 +6,7 @@ def filter_by_currency(trans, filter):
     возвращает итерируемый объект
     """
     for i in trans:
-        if i['operationAmount']['currency'].get('code') == filter:
+        if i["operationAmount"]["currency"].get("code") == filter:
             yield i
 
 
