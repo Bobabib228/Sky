@@ -14,7 +14,7 @@ def account():
 
 
 @pytest.fixture
-def number_MsCard():
+def number_ms_card():
     return "MasterCard 1234567891234567"
 
 

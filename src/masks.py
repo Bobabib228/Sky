@@ -1,11 +1,12 @@
 import logging
 
-logger = logging.getLogger('masks')
+logger = logging.getLogger("masks")
 logger.setLevel(logging.DEBUG)
 file_handler = logging.FileHandler("logs.log")
-file_formater = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s:  %(message)s')
+file_formater = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s:  %(message)s")
 file_handler.setFormatter(file_formater)
 logger.addHandler(file_handler)
+
 
 def get_mask_card_number(card_number: str) -> str:
     """
@@ -36,5 +37,3 @@ def get_mask_account(account_number: str) -> str:
     else:
         logger.error("Номер счёта введен некорректно")
         return "Номер счёта введен некорректно"
-
-

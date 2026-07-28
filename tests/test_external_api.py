@@ -1,8 +1,6 @@
 import os
 from unittest import mock
 
-import pytest
-
 from src.external_api import currency_transfer
 
 API_KEY = os.getenv("API_KEY")

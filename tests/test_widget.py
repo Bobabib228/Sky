@@ -3,8 +3,8 @@ import pytest
 from src.widget import get_date, mask_account_card
 
 
-def test_mask_account_card(number_MsCard, card, account_widget, account):
-    assert mask_account_card(number_MsCard) == f"MasterCard {card}"
+def test_mask_account_card(number_ms_card, card, account_widget, account):
+    assert mask_account_card(number_ms_card) == f"MasterCard {card}"
     assert mask_account_card(account_widget) == f"Счёт {account}"
 
 
