@@ -21,7 +21,7 @@ def test_currency_transfer(mock_request, operations):
     assert func_res == 637550.80076
     mock_request.assert_called_once_with(
         "GET",
-        f"https://api.apilayer.com/exchangerates_data/convert?to=RUB&from=USD&amount=8221.37",
+        "https://api.apilayer.com/exchangerates_data/convert?to=RUB&from=USD&amount=8221.37",
         headers={"apikey": API_KEY},
         data={},
     )

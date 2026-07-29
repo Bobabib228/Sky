@@ -17,11 +17,17 @@ def log(filename=None):
             try:
                 result = func(*args, **kwargs)
                 time_end = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                msg = f"Время начала:{time_start} время окончания:{time_end} имя функции:{func.__name__} результат: {result}"
+                msg = (
+                    f"Время начала:{time_start} время окончания:{time_end} "
+                    f"имя функции:{func.__name__} результат: {result}"
+                )
 
             except Exception as e:
 
-                msg = f"Время начала:{time_start} ошибка: {type(e).__name__} имя функции:{func.__name__} параметры: {params}"
+                msg = (
+                    f"Время начала:{time_start} ошибка: {type(e).__name__} "
+                    f"имя функции:{func.__name__} параметры: {params}"
+                )
                 raise
             finally:
                 if filename:
