@@ -24,3 +24,6 @@ def sort_by_date(data: list, reverse: bool = True) -> list:
         Новый отсортированный список словарей.
     """
     return sorted(data, key=lambda x: x.get("date", ""), reverse=reverse)
+
+
+

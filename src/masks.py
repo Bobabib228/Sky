@@ -31,9 +31,5 @@ def get_mask_account(account_number: str) -> str:
     """
     logger.info("Starting get_mask_account")
     account_str = account_number
-    if len(account_str) == 20:
-        logger.info("Ending get_mask_account")
-        return f"**{account_str[-4:]}"
-    else:
-        logger.error("Номер счёта введен некорректно")
-        return "Номер счёта введен некорректно"
+    logger.info("Ending get_mask_account")
+    return f"**{account_str[-4:]}"
