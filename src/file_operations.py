@@ -2,7 +2,6 @@ import openpyxl
 import pandas as pd
 
 
-
 def read_csv_transactions(file_path):
     """
     Читает транзакции из CSV файла.
@@ -11,7 +10,7 @@ def read_csv_transactions(file_path):
         df = pd.read_csv(file_path)
         if df.empty:
             return []
-        return df.to_dict('records')
+        return df.to_dict("records")
     except FileNotFoundError:
         raise
     except Exception:
@@ -26,7 +25,7 @@ def read_excel_transactions(file_path):
         df = pd.read_excel(file_path, index_col=0)
         if df.empty:
             return []
-        return df.to_dict('records')
+        return df.to_dict("records")
     except FileNotFoundError:
         raise
     except Exception as e:

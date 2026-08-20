@@ -169,8 +169,4 @@ def operations():
 
 @pytest.fixture
 def csv_data():
-    return {
-        'date': ['2023-01-01', '2023-01-02'],
-        'amount': [100.5, 200.75],
-        'description': ['Payment 1', 'Payment 2']
-    }
+    return {"date": ["2023-01-01", "2023-01-02"], "amount": [100.5, 200.75], "description": ["Payment 1", "Payment 2"]}
