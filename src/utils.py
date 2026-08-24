@@ -16,7 +16,7 @@ def load_transactions(file_path):
     """
     logger.info("Starting load_transactions")
     try:
-        with open(file_path, "r") as f:
+        with open(file_path, "r", encoding="utf-8") as f:
             data = json.load(f)
             logger.info("Ending load_transactions")
             return data if isinstance(data, list) else []

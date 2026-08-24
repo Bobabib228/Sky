@@ -35,3 +35,15 @@ def card_number_generator(start, end):
         if length <= 16:
             card = ("0" * (16 - length)) + i
             yield f"{card[:4]} {card[4:8]} {card[8:12]} {card[12:16]}"
+
+
+def filter_by_currency_csv(trans, filter):
+    """
+    Фильтрует банковские операции по валюте
+
+    принимает на вход список словерей банковских операций и параметр фильтрации
+    возвращает итерируемый объект
+    """
+    for i in trans:
+        if i["currency_code"] == filter:
+            yield i
